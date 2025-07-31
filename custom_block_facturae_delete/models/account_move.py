@@ -1,5 +1,5 @@
-from odoo import models, _
-from odoo.exceptions import UserError
+from odoo import models, _ # type: ignore[import]
+from odoo.exceptions import UserError # type: ignore[import]
 
 class AccountMove(models.Model):
     _inherit = 'account.move'
