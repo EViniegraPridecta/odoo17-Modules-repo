@@ -8,6 +8,7 @@
     'installable': True,
     'application': False,
     'license': 'LGPL-3',
-    'icon': 'static/description/icon.png',
+    "post_init_hook": "post_init_hook",
+    'icon': 'custom_block_facturae_delete/static/description/icon.png',
 }
 
