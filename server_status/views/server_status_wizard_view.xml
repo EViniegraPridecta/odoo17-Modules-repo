@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_server_status_wizard_form" model="ir.ui.view">
+        <field name="name">server.status.wizard.form</field>
+        <field name="model">server.status.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Estado del Servidor" create="false" edit="false">
+                <!-- Disco -->
+                <group>
+                    <field name="server_total_space"/>
+                    <field name="server_used_space"/>
+                </group>
+                <group>
+                    <field name="server_used_percent"/>
+                    <field name="server_free_space"/>
+                </group>
+
+                <separator string="Registros del sistema"/>
+
+                <div class="row mb-2">
+                    <div class="col-6 o_form_label">Facturas</div>
+                    <div class="col-6">
+                        <field name="invoice_count" readonly="1"/> / ilimitadas
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-6 o_form_label">Clientes y Proveedores (Contactos)</div>
+                    <div class="col-6">
+                        <field name="partner_count" readonly="1"/> / ilimitados
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-6 o_form_label">Productos</div>
+                    <div class="col-6">
+                        <field name="product_count" readonly="1"/> / ilimitados
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-6 o_form_label">Servicios</div>
+                    <div class="col-6">
+                        <field name="service_count" readonly="1"/> / ilimitados
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-6 o_form_label">Usuarios</div>
+                    <div class="col-6">
+                        <field name="user_count" readonly="1"/> / ilimitados
+                    </div>
+                </div>
+
+                <footer>
+                    <button string="Cerrar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_server_status_wizard" model="ir.actions.act_window">
+        <field name="name">Estado del Servidor</field>
+        <field name="res_model">server.status.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

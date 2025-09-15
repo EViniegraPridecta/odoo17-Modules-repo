@@ -1,0 +1,28 @@
+<odoo>
+    <record id="view_res_config_settings_server_status" model="ir.ui.view">
+        <field name="name">res.config.settings.server.status.button</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='about']" position="before">
+                <div id="server_status_button">
+                    <block title="Estado del Servidor">
+                        <setting>
+                            <button name="%(action_server_status_wizard)d"
+                                    type="action"
+                                    string="Estado del Servidor"
+                                    class="btn-link"/>
+                            
+                        </setting>
+                        <setting>
+                            <button type="action"
+                                    name="server_status.action_about_wizard"
+                                    string="Acerca de"
+                                    class="btn btn-link"/>
+                        </setting>
+                    </block>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

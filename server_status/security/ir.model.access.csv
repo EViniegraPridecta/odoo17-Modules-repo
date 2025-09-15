@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_config_settings_server_status,res.config.settings.server.status,model_res_config_settings,,1,1,1,1
+access_server_status_wizard,access.server.status.wizard,model_server_status_wizard,,1,0,1,0
+access_about_wizard,access.about.wizard,model_about_wizard,,1,0,0,0
